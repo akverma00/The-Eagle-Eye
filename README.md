@@ -38,7 +38,11 @@ python-api-server
    ```
    pip install -r requirements.txt
    ```
-
+4. Deploy using gcloud 
+   ```
+   gcloud init
+   gcloud app deploy
+   ```
 ## Usage
 
 1. Start the server:
