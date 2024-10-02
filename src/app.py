@@ -1,9 +1,15 @@
 from flask import Flask, request, jsonify
 from controllers.video_controller import VideoController
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 video_controller = VideoController()
+
+@app.route('/')
+def home():
+    return "Hello, World!"
 
 @app.route('/generate', methods=['POST'])
 def generate():
@@ -24,4 +30,4 @@ def generate():
         return jsonify({'error': f'An error occurred: {str(e)}'}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8080)
