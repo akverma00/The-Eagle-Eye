@@ -45,13 +45,14 @@ class CustomVideoService:
             "description": "This is a sample description for the video.",
             "url": video_url,
             "location": location,
+            "prompt_response": response
         }
 
     # Find your Account SID and Auth Token at twilio.com/console
     # and set the environment variables. See http://twil.io/secure
     def sendVoiceAlert(self, message):
-        account_sid = "xxxx"  #key1
-        auth_token = "xxxx"     #key2
+        account_sid = "xxxxx"  #key1
+        auth_token = "xxxxx"     #key2
         client = Client(account_sid, auth_token)
         twiml="<Response><Say>"+ message+"</Say></Response>",
         call = client.calls.create(
