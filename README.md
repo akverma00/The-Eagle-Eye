@@ -28,7 +28,13 @@ python-api-server
    cd python-api-server
    ```
 
-2. Install the required dependencies:
+2. Install venv 
+   ```
+   brew install python3.11-venv
+   python3.11 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
